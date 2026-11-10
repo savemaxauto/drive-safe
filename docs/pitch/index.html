@@ -141,6 +141,22 @@ a{color:var(--blue)}
 .chan td.net{font-weight:600}
 .chan tr.low td.net{color:var(--bad)}
 .ask{font-family:var(--display);font-weight:700;font-size:clamp(24px,3.4vw,34px);line-height:1.2;letter-spacing:-.015em;max-width:30ch;text-wrap:balance}
+.see{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 var(--display);background:var(--blue);color:var(--bg);text-decoration:none;border-radius:10px;padding:14px 18px;justify-self:start}
+.see:hover{filter:brightness(1.07)}
+.see:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.prod{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:center}
+.prod img{border-radius:12px;background:var(--stone);width:100%;max-width:360px;justify-self:end}
+.prod .txt{display:grid;gap:20px;min-width:0}
+@media (max-width:760px){.prod{grid-template-columns:1fr}.prod img{justify-self:start;max-width:260px}}
+.cpl .track{overflow:visible}
+.cpl .zero{position:absolute;left:40%;top:-6px;bottom:-6px;width:2px;background:var(--ink)}
+.cpl .range{position:absolute;top:0;bottom:0;background:var(--good);opacity:.22;border-radius:3px}
+.cpl .bar.us .fill{background:var(--good)}
+.cpl .bar.us .v{color:var(--good);font-weight:600}
+.cpl .axis{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 92px;gap:14px;font-size:12px;color:var(--muted)}
+.cpl .axis div{position:relative;height:14px}
+.cpl .axis div span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+@media (max-width:560px){.cpl .axis{display:none}}
 .sources{font-size:13px;color:var(--muted);display:grid;gap:6px;padding-left:18px;margin:0}
 .sources a{color:var(--muted)}
 .traj{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;height:240px;border-bottom:2px solid var(--ink)}
@@ -198,8 +214,14 @@ a{color:var(--blue)}
 <!-- 3 -->
 <section>
   <div class="eyebrow"><span>The idea</span><span class="n">03</span></div>
-  <h2>The car freshener that saves lives.</h2>
-  <p class="lede">It sits on the vent. It makes the car smell good. Every time you get in, <strong>one tap puts the phone away</strong>.</p>
+  <div class="prod">
+    <div class="txt">
+      <h2>The car freshener that saves lives.</h2>
+      <p class="lede">It sits on the vent. It makes the car smell good. Every time you get in, <strong>one tap puts the phone away</strong>.</p>
+      <a class="see" href="preorder.html">See it as a buyer →</a>
+    </div>
+    <img src="assets/render-portrait.jpg" alt="Concept render of the Save Max Auto vent diffuser in warm stone">
+  </div>
   <div class="grid g6">
     <div class="cell lead"><span class="num">37%</span><p>of drivers read texts or email while driving. <b>About 85 million people.</b></p></div>
     <div class="cell"><span class="num">58%</span><p>of trips include phone use</p></div>
@@ -214,8 +236,15 @@ a{color:var(--blue)}
 
 <!-- 4 -->
 <section>
-  <div class="eyebrow"><span>Why it's a better lead business</span><span class="n">04</span></div>
-  <h2>The customer pays us to become the lead.</h2>
+  <div class="eyebrow"><span>Built on what we do best</span><span class="n">04</span></div>
+  <h2>Every lead we buy costs us $20. This one pays us.</h2>
+  <div class="cpl bars" role="img" aria-label="Cost to acquire a lead: Google 24.52 dollars, blended 20.33, Facebook 20.07, freshener buyer about minus 9 dollars, range minus 2 to minus 16">
+    <div class="bar"><span>Google</span><div class="track"><div class="fill" style="left:40%;width:49.04%"></div><div class="zero"></div></div><span class="v">$24.52</span></div>
+    <div class="bar"><span>Blended auto</span><div class="track"><div class="fill" style="left:40%;width:40.66%"></div><div class="zero"></div></div><span class="v">$20.33</span></div>
+    <div class="bar"><span>Facebook</span><div class="track"><div class="fill" style="left:40%;width:40.14%"></div><div class="zero"></div></div><span class="v">$20.07</span></div>
+    <div class="bar us"><span><b>Freshener buyer</b></span><div class="track"><div class="range" style="left:8%;width:28%"></div><div class="fill" style="left:22%;width:18%"></div><div class="zero"></div></div><span class="v">−$9</span></div>
+    <div class="axis"><span></span><div><span style="left:0%">−$20</span><span style="left:40%">$0</span><span style="left:80%">$20</span></div><span></span></div>
+  </div>
   <div class="grid g2">
     <div class="model">
       <span class="tag">Today</span>
@@ -229,13 +258,13 @@ a{color:var(--blue)}
       <span class="tag">With the freshener</span>
       <div class="flow">
         <div><span>They pay us for the kit</span><span class="pos">+$25</span></div>
-        <div><span>Refills, every ~2 months</span><span class="pos">+again</span></div>
-        <div><span>Every time they shop insurance</span><span class="pos">+EPL, again</span></div>
+        <div><span>They opt in to quotes, with their renewal month</span><span class="pos">+EPL</span></div>
+        <div><span>Every renewal, every refill</span><span class="pos">+again</span></div>
       </div>
     </div>
   </div>
-  <p class="say">Today the lead costs us money first. Here the lead pays us first, and we can sell it again every time they shop. 53% of drivers shop their insurance every year.</p>
-  <p class="foot">Kit margin depends on a supplier quote (estimated landed cost $9 to $23). Refill cadence: <a href="https://reports.mintel.com/display/679733/">Mintel</a> benchmark (2014). Shopping: <a href="https://www.jdpower.com/business/us-insurance-shopping-insights">J.D. Power</a>. Selling a lead needs consent at checkout that counsel signs off.</p>
+  <p class="say">We're already great at selling an auto lead. The hard part has always been paying for it. This is the one idea I've found where the driver pays us to become the lead, and tells us when they'll shop next.</p>
+  <p class="foot">Cost to acquire: October cost per lead by channel. Freshener buyer: $25 price minus an estimated $16 landed cost; shaded band shows the $9 to $23 cost range (−$2 to −$16). Refill cadence: <a href="https://reports.mintel.com/display/679733/">Mintel</a> benchmark (2014). 53% of drivers recently shopped their insurance (<a href="https://www.jdpower.com/business/us-insurance-shopping-insights">J.D. Power</a>). Selling a lead needs consent at checkout that counsel signs off.</p>
 </section>
 
 <!-- 5 -->
@@ -297,6 +326,7 @@ a{color:var(--blue)}
   <div class="eyebrow"><span>What we know</span><span class="n">07</span></div>
   <h2>Known, and still to prove.</h2>
   <div class="score">
+    <div class="row"><span><span class="pill good">Known</span></span><span class="q">We know how to sell an auto lead</span><span class="a">$26.47 EPL in October.</span></div>
     <div class="row"><span><span class="pill good">Known</span></span><span class="q">These drivers pay us</span><span class="a">1,688 buyers. 114 bought a car scent.</span></div>
     <div class="row"><span><span class="pill good">Known</span></span><span class="q">The problem is huge</span><span class="a">37% of drivers read texts while driving.</span></div>
     <div class="row"><span><span class="pill good">Known</span></span><span class="q">Our lead margin is thin</span><span class="a">$6.14 per lead. $2.57 on Google.</span></div>
@@ -335,6 +365,7 @@ a{color:var(--blue)}
     <div class="outcome"><span class="tag">Hit 500</span><b>Find a supplier.</b><span>Samples, a quote, a ship date.</span></div>
     <div class="outcome miss"><span class="tag">Miss</span><b>Refund everyone.</b><span>We learned it cheaply, and keep the waitlist.</span></div>
   </div>
+  <a class="see" href="preorder.html">See the preorder page →</a>
   <p class="ask">Do we move forward?</p>
   <p class="foot">Preorder terms state the goal, the deadline and a full refund if we miss. Taking payment before a supplier is confirmed needs counsel's sign-off first. Giveaway entries need the administrator's approval.</p>
 </section>
