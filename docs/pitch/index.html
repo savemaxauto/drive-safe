@@ -132,6 +132,14 @@ a{color:var(--blue)}
 @media (max-width:860px){.gates{grid-template-columns:1fr 1fr}.gate:nth-child(2){border-right:0}.gate:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media (max-width:520px){.gates{grid-template-columns:1fr}.gate{border-right:0;border-bottom:1px solid var(--line)}.gate:last-child{border-bottom:0}}
 
+.chan{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.chanwrap{overflow-x:auto}
+.chan th{font:600 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:right;padding:0 12px 10px;border-bottom:2px solid var(--ink)}
+.chan th:first-child,.chan td:first-child{text-align:left;padding-left:0}
+.chan td{padding:12px;text-align:right;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:14px}
+.chan td:first-child{font-family:var(--body);font-size:15px;font-weight:600}
+.chan td.net{font-weight:600}
+.chan tr.low td.net{color:var(--bad)}
 .ask{font-family:var(--display);font-weight:700;font-size:clamp(24px,3.4vw,34px);line-height:1.2;letter-spacing:-.015em;max-width:30ch;text-wrap:balance}
 .sources{font-size:13px;color:var(--muted);display:grid;gap:6px;padding-left:18px;margin:0}
 .sources a{color:var(--muted)}
@@ -161,7 +169,15 @@ a{color:var(--blue)}
     <div class="cell"><span class="num">1,688</span><p>bought something. Proof they'll pay us, not just fill a form.</p></div>
     <div class="cell"><span class="num">Nov 16</span><p>the giveaway closes. After that, nothing brings them back. The next campaign buys them again.</p></div>
   </div>
-  <p class="say">Our model is buy traffic, capture a form, sell the lead once. Our margin is EPL minus CPL, one shot per person. When the campaign ends the asset is gone.</p>
+  <div class="chanwrap"><table class="chan">
+    <thead><tr><th>October, auto</th><th>EPL</th><th>CPL</th><th>Net per lead</th><th>Margin</th></tr></thead>
+    <tbody>
+      <tr><td>Blended</td><td>$26.47</td><td>$20.33</td><td class="net">$6.14</td><td>23%</td></tr>
+      <tr class="low"><td>Facebook</td><td>$23.33</td><td>$20.07</td><td class="net">$3.26</td><td>14%</td></tr>
+      <tr class="low"><td>Google</td><td>$27.09</td><td>$24.52</td><td class="net">$2.57</td><td>9%</td></tr>
+    </tbody>
+  </table></div>
+  <p class="say">In October we kept $6.14 of every $26.47 lead. On Google it was $2.57. We spend 77 cents of every dollar just to get the lead, once. A $2 rise in Google CPL nearly wipes out the margin.</p>
   <p class="foot">Customer accounts and buyers on raptor.savemaxauto.com, Sept 28 to Nov 9, 2026. The administrator's entrant count is the official figure.</p>
 </section>
 
@@ -189,7 +205,7 @@ a{color:var(--blue)}
       </div>
     </div>
   </div>
-  <p class="say">Today the lead costs us money before we earn anything. With this, the lead pays us first. Every EPL dollar after that is margin with no acquisition cost against it.</p>
+  <p class="say">In October we netted $6.14 per auto lead. At the midpoint unit cost, the kit nets about $9 before we sell a single lead. The lead pays us first, and every EPL dollar after that is margin with no CPL against it.</p>
   <p class="foot">Kit contribution uses the cost sheet's landed range of about $9 to $23 per unit (published listings, not quotes). Refill cadence: <a href="https://reports.mintel.com/display/679733/">Mintel</a> consumer research found refills mostly replaced about every two months (dated 2014; a benchmark, not our data). Selling a lead requires consent language at checkout that counsel signs off.</p>
 </section>
 
@@ -231,7 +247,7 @@ a{color:var(--blue)}
   <h2>Value per buyer, year one. Plug in our real EPL.</h2>
   <div class="calc">
     <form class="inputs" id="calc" autocomplete="off">
-      <h3>Inputs <span style="font-weight:400;color:var(--muted)">(defaults are examples)</span></h3>
+      <h3>Inputs <span style="font-weight:400;color:var(--muted)">(EPL and CPL are October actuals)</span></h3>
       <span class="group">Product</span>
       <div class="field"><label for="price">Kit price</label><div class="box"><span>$</span><input id="price" type="number" step="1" min="0" value="25"></div></div>
       <div class="field"><label for="cogs">Landed cost per kit<small>Cost sheet range $9–23</small></label><div class="box"><span>$</span><input id="cogs" type="number" step="1" min="0" value="16"></div></div>
@@ -240,9 +256,9 @@ a{color:var(--blue)}
       <span class="group">Lead</span>
       <div class="field"><label for="windows">Shopping windows per year<small>6-month terms = 2</small></label><div class="box"><input id="windows" type="number" step="1" min="0" value="2"></div></div>
       <div class="field"><label for="capture">Share we convert to a sold lead, per window<small>Consented, in market, submits</small></label><div class="box"><input id="capture" type="number" step="1" min="0" max="100" value="15"><span>%</span></div></div>
-      <div class="field"><label for="epl">Our EPL<small>Replace with the real number</small></label><div class="box"><span>$</span><input id="epl" type="number" step="1" min="0" value="20"></div></div>
+      <div class="field"><label for="epl">Our EPL<small>October, blended auto</small></label><div class="box"><span>$</span><input id="epl" type="number" step="0.01" min="0" value="26.47"></div></div>
       <span class="group">Compare</span>
-      <div class="field"><label for="cpl">Our CPL today<small>Replace with the real number</small></label><div class="box"><span>$</span><input id="cpl" type="number" step="1" min="0" value="12"></div></div>
+      <div class="field"><label for="cpl">Our CPL today<small>October, blended auto</small></label><div class="box"><span>$</span><input id="cpl" type="number" step="0.01" min="0" value="20.33"></div></div>
       <div class="field"><label for="buyers">Kit buyers<small>321 = 3% of the 10,698</small></label><div class="box"><input id="buyers" type="number" step="1" min="0" value="321"></div></div>
       <button type="button" class="reset" id="reset">Reset to examples</button>
     </form>
@@ -262,7 +278,7 @@ a{color:var(--blue)}
       <div class="vs" id="vs"></div>
     </div>
   </div>
-  <p class="foot">This is a model, not a forecast. Every default is an example to be replaced: our EPL and CPL, a supplier quote, and the convert rate we measure. Revenue only; fulfillment, payment fees and staff time are not included.</p>
+  <p class="foot">This is a model, not a forecast. EPL and CPL are October blended auto actuals (Facebook $23.33 / $20.07, Google $27.09 / $24.52). The other defaults are examples to replace with a supplier quote, a refill price and the convert rate we measure. Revenue only; fulfillment, payment fees and staff time are not included.</p>
 </section>
 
 <!-- 7 -->
@@ -272,6 +288,7 @@ a{color:var(--blue)}
   <div class="score">
     <div class="row"><span><span class="pill good">Known</span></span><span class="q">Drivers shop insurance constantly</span><span class="a">53% recently shopped; switching at a record. The demand side of our business is strong.</span></div>
     <div class="row"><span><span class="pill good">Known</span></span><span class="q">This audience pays us</span><span class="a">1,688 buyers on the store. The scent booster sold 114 orders at $28.</span></div>
+    <div class="row"><span><span class="pill good">Known</span></span><span class="q">Our lead margin is thin</span><span class="a">October auto: $6.14 net per lead (23%). Google: $2.57 (9%). Any CPL rise eats it.</span></div>
     <div class="row"><span><span class="pill good">Known</span></span><span class="q">Drivers resist insurer tracking</span><span class="a">12% enrolled, ~70% worried. Opt-in first is the open position.</span></div>
     <div class="row"><span><span class="pill warn">This week</span></span><span class="q">Will they pay $25 for it?</span><span class="a">The preorder test. Pass mark agreed with you before we spend.</span></div>
     <div class="row"><span><span class="pill warn">This week</span></span><span class="q">What does a unit cost?</span><span class="a">$400 of samples and quotes turns the $9–23 range into a number.</span></div>
