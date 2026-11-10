@@ -143,134 +143,145 @@ a{color:var(--blue)}
 .ask{font-family:var(--display);font-weight:700;font-size:clamp(24px,3.4vw,34px);line-height:1.2;letter-spacing:-.015em;max-width:30ch;text-wrap:balance}
 .sources{font-size:13px;color:var(--muted);display:grid;gap:6px;padding-left:18px;margin:0}
 .sources a{color:var(--muted)}
+.traj{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;height:240px;border-bottom:2px solid var(--ink)}
+.traj .col{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%;gap:6px;min-width:0}
+.traj .v{font:500 13px/1 var(--mono);text-align:center;font-variant-numeric:tabular-nums}
+.traj .b{background:var(--stone);border-radius:4px 4px 0 0}
+.traj .check .b{background:var(--blue)}
+.traj .check .v{color:var(--blue);font-weight:600}
+.traj .goal .b{background:var(--good)}
+.traj .goal .v{color:var(--good);font-weight:600}
+.trajx{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;font-size:12px;color:var(--muted);text-align:center;margin-top:-18px}
+.goalnum{font-family:var(--display);font-weight:800;font-size:clamp(64px,10vw,120px);line-height:.9;letter-spacing:-.04em;color:var(--blue)}
+.goalnum small{display:block;font-size:20px;letter-spacing:-.01em;color:var(--ink);font-weight:700;margin-top:10px}
+.outcome{border-radius:10px;padding:20px;display:grid;gap:6px;background:var(--good-soft)}
+.outcome.miss{background:var(--panel)}
+.outcome .tag{font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--good)}
+.outcome.miss .tag{color:var(--muted)}
+.outcome b{font-family:var(--display);font-size:22px;letter-spacing:-.01em}
+.g6{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:32px}
+@media (max-width:760px){.g6{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cell.lead .num{color:var(--blue)}
 </style>
 
 <div class="wrap">
 
 <!-- 1 -->
 <section class="hero">
-  <div class="eyebrow"><span>Save Max Auto · Proposal for Russ · Nov 10, 2026</span><span class="n">01</span></div>
-  <h1>The car freshener that saves lives.</h1>
-  <p class="lede">And the first lead source we <strong>get paid to acquire</strong>.</p>
-  <div class="stat">
-    <div><span class="num">3,208</span><small>deaths in 2024 in crashes involving a distracted driver</small></div>
-    <div><span class="num">~9</span><small>a day</small></div>
+  <div class="eyebrow"><span>Save Max Auto · For Russ · Nov 10, 2026</span><span class="n">01</span></div>
+  <h1>The giveaway found us 10,698 drivers.</h1>
+  <p class="lede">That's the hard part, and <strong>it worked</strong>.</p>
+  <div class="grid g3">
+    <div class="cell"><span class="num">10,698</span><p>signed up in six weeks</p></div>
+    <div class="cell"><span class="num">1,688</span><p>paid us, 1,805 orders</p></div>
+    <div class="cell lead"><span class="num">114</span><p>already bought a car scent from us, at $28</p></div>
   </div>
-  <p class="say">Every time you get in the car, it's the cue to put the phone away. That's the product. Now let me show you why it's the best lead business we could own.</p>
-  <p class="foot">Source: <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813790">NHTSA, Distracted Driving in 2024</a>. "Saves lives" is the purpose; its effect on driving is not yet tested.</p>
+  <p class="say">Here's what I found. They didn't just enter. They bought, and over a hundred bought something for their car. These drivers will pay us. We just don't have a reason to keep them.</p>
+  <p class="foot">raptor.savemaxauto.com, Sept 28 to Nov 9, 2026. The administrator's entrant count is the official figure.</p>
 </section>
 
 <!-- 2 -->
 <section>
-  <div class="eyebrow"><span>The problem in our P&amp;L</span><span class="n">02</span></div>
-  <h2>We rent our audience. Every campaign starts at zero.</h2>
-  <div class="grid g3">
-    <div class="cell"><span class="num">10,698</span><p>signed up on the giveaway store. We paid for every one.</p></div>
-    <div class="cell"><span class="num">1,688</span><p>bought something. Proof they'll pay us, not just fill a form.</p></div>
-    <div class="cell"><span class="num">Nov 16</span><p>the giveaway closes. After that, nothing brings them back. The next campaign buys them again.</p></div>
-  </div>
+  <div class="eyebrow"><span>Why we need something that lasts</span><span class="n">02</span></div>
+  <h2>On November 16 they leave, and we buy them again.</h2>
   <div class="chanwrap"><table class="chan">
-    <thead><tr><th>October, auto</th><th>EPL</th><th>CPL</th><th>Net per lead</th><th>Margin</th></tr></thead>
+    <thead><tr><th>October, auto</th><th>EPL</th><th>CPL</th><th>We keep</th><th>Margin</th></tr></thead>
     <tbody>
       <tr><td>Blended</td><td>$26.47</td><td>$20.33</td><td class="net">$6.14</td><td>23%</td></tr>
       <tr class="low"><td>Facebook</td><td>$23.33</td><td>$20.07</td><td class="net">$3.26</td><td>14%</td></tr>
       <tr class="low"><td>Google</td><td>$27.09</td><td>$24.52</td><td class="net">$2.57</td><td>9%</td></tr>
     </tbody>
   </table></div>
-  <p class="say">In October we kept $6.14 of every $26.47 lead. On Google it was $2.57. We spend 77 cents of every dollar just to get the lead, once. A $2 rise in Google CPL nearly wipes out the margin.</p>
-  <p class="foot">Customer accounts and buyers on raptor.savemaxauto.com, Sept 28 to Nov 9, 2026. The administrator's entrant count is the official figure.</p>
+  <p class="say">We keep $6 of every $26 lead, and we sell it once. What if the drivers we already found stayed with us?</p>
 </section>
 
 <!-- 3 -->
 <section>
-  <div class="eyebrow"><span>The thesis</span><span class="n">03</span></div>
-  <h2>Flip the CPL. The customer pays us to become the lead.</h2>
-  <div class="grid g2">
-    <div class="model">
-      <span class="tag">Today: form-fill lead</span>
-      <div class="flow">
-        <div><span>We pay to acquire</span><span class="neg">−CPL</span></div>
-        <div><span>We sell it</span><span class="pos">+EPL, once</span></div>
-        <div><span>After the sale</span><span>No reason to come back</span></div>
-        <div><span>Margin per person</span><span>EPL − CPL</span></div>
-      </div>
-    </div>
-    <div class="model new">
-      <span class="tag">Proposed: product-led lead</span>
-      <div class="flow">
-        <div><span>Driver buys the kit at $25</span><span class="pos">+$2 to +$16</span></div>
-        <div><span>Refills, every ~2 months</span><span class="pos">+margin, again</span></div>
-        <div><span>Each insurance shopping window</span><span class="pos">+EPL, again</span></div>
-        <div><span>Margin per person</span><span>Product + refills + EPL × windows</span></div>
-      </div>
-    </div>
+  <div class="eyebrow"><span>The idea</span><span class="n">03</span></div>
+  <h2>The car freshener that saves lives.</h2>
+  <p class="lede">It sits on the vent. It makes the car smell good. Every time you get in, <strong>one tap puts the phone away</strong>.</p>
+  <div class="grid g6">
+    <div class="cell lead"><span class="num">37%</span><p>of drivers read texts or email while driving. <b>About 85 million people.</b></p></div>
+    <div class="cell"><span class="num">58%</span><p>of trips include phone use</p></div>
+    <div class="cell"><span class="num">52%</span><p>of trips that end in a crash had phone distraction</p></div>
+    <div class="cell"><span class="num">315K</span><p>injured and 3,208 killed in distracted-driving crashes in 2024</p></div>
+    <div class="cell"><span class="num">+28%</span><p>average insurance increase after a texting ticket</p></div>
+    <div class="cell"><span class="num">$98B</span><p>a year in economic cost from distracted-driving crashes</p></div>
   </div>
-  <p class="say">In October we netted $6.14 per auto lead. At the midpoint unit cost, the kit nets about $9 before we sell a single lead. The lead pays us first, and every EPL dollar after that is margin with no CPL against it.</p>
-  <p class="foot">Kit contribution uses the cost sheet's landed range of about $9 to $23 per unit (published listings, not quotes). Refill cadence: <a href="https://reports.mintel.com/display/679733/">Mintel</a> consumer research found refills mostly replaced about every two months (dated 2014; a benchmark, not our data). Selling a lead requires consent language at checkout that counsel signs off.</p>
+  <p class="say">The phone is the biggest problem in the car, and almost everyone has it. A product that lives in the car gives us a reason to stay with these drivers every day.</p>
+  <p class="foot">37%: <a href="https://aaafoundation.org/wp-content/uploads/2026/01/202412-AAAFTS-2023-Traffic-Safety-Culture-Index.pdf">AAA Foundation, 2023 Traffic Safety Culture Index</a> (past 30 days); 85 million applies that to about 233 million licensed U.S. drivers (FHWA). 58% and 52%: <a href="https://documents.ncsl.org/wwwncsl/Transportation/CMT-2023-Distracted-Driving-Report.pdf">Cambridge Mobile Telematics</a> (2022 data). 315K and 3,208: <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813790">NHTSA, 2024</a>. +28%: <a href="https://insurance.com/auto-insurance/auto-insurance-basics/texting-tickets.html">Insurance.com</a>. $98B: NHTSA economic cost estimate (2019 data). The tap starts a focus setting on the driver's own phone; it can't lock a phone, and its effect on driving is not yet tested.</p>
 </section>
 
 <!-- 4 -->
 <section>
-  <div class="eyebrow"><span>Why a lead that stays is worth more</span><span class="n">04</span></div>
-  <h2>Half of drivers shop every year. We'd be in the car when they do.</h2>
-  <div class="grid g3">
-    <div class="cell"><span class="num">53%</span><p>of auto insurance customers recently shopped their policy.</p></div>
-    <div class="cell"><span class="num">Record</span><p>switching in Q3 2026: more Americans switched personal-lines insurers than at any point on record.</p></div>
-    <div class="cell"><span class="num">6 mo</span><p>typical auto policy term. A renewal is a fresh shopping trigger, twice a year.</p></div>
+  <div class="eyebrow"><span>Why it's a better lead business</span><span class="n">04</span></div>
+  <h2>The customer pays us to become the lead.</h2>
+  <div class="grid g2">
+    <div class="model">
+      <span class="tag">Today</span>
+      <div class="flow">
+        <div><span>We pay for the lead</span><span class="neg">−$20.33</span></div>
+        <div><span>We sell it, once</span><span class="pos">+$26.47</span></div>
+        <div><span>We keep</span><span>$6.14</span></div>
+      </div>
+    </div>
+    <div class="model new">
+      <span class="tag">With the freshener</span>
+      <div class="flow">
+        <div><span>They pay us for the kit</span><span class="pos">+$25</span></div>
+        <div><span>Refills, every ~2 months</span><span class="pos">+again</span></div>
+        <div><span>Every time they shop insurance</span><span class="pos">+EPL, again</span></div>
+      </div>
+    </div>
   </div>
-  <p class="say">A form-fill lead is worth full price for about a week, then it's aged inventory. A driver who has our product on the vent and buys refills is someone we can reach, with permission, every time they're in market. That's a renewable lead, not a one-time sale.</p>
-  <p class="foot">Source: <a href="https://www.jdpower.com/business/us-insurance-shopping-insights">J.D. Power U.S. Insurance Shopping Insights</a>; <a href="https://www.insurancebusinessmag.com/us/news/auto-motor/auto-switching-hits-record-high-as-personal-lines-shopping-levels-off-594727.aspx">Insurance Business, Q3 2026 LIST report</a>.</p>
+  <p class="say">Today the lead costs us money first. Here the lead pays us first, and we can sell it again every time they shop. 53% of drivers shop their insurance every year.</p>
+  <p class="foot">Kit margin depends on a supplier quote (estimated landed cost $9 to $23). Refill cadence: <a href="https://reports.mintel.com/display/679733/">Mintel</a> benchmark (2014). Shopping: <a href="https://www.jdpower.com/business/us-insurance-shopping-insights">J.D. Power</a>. Selling a lead needs consent at checkout that counsel signs off.</p>
 </section>
 
 <!-- 5 -->
 <section>
-  <div class="eyebrow"><span>The premium tier, later</span><span class="n">05</span></div>
-  <h2>A lead filter nobody sells today: the driver who opted in.</h2>
-  <div class="bars" role="img" aria-label="Directional auto insurance lead prices: aged 3 to 8 dollars, shared 10 to 25, exclusive 55 to 75, opted-in driver signal unpriced">
-    <div class="bar"><span>Aged / data lead</span><div class="track"><div class="fill" style="left:2%;width:3.3%"></div></div><span class="v">$3–8</span></div>
-    <div class="bar"><span>Shared web lead</span><div class="track"><div class="fill" style="left:6.7%;width:10%"></div></div><span class="v">$10–25</span></div>
-    <div class="bar"><span>Exclusive web lead</span><div class="track"><div class="fill" style="left:36.7%;width:13.3%"></div></div><span class="v">$55–75</span></div>
-    <div class="bar hl"><span>Exclusive + opted-in driving signal</span><div class="track"><div class="fill" style="left:50%;width:50%;opacity:.35"></div></div><span class="v">Unpriced</span></div>
+  <div class="eyebrow"><span>The upside, later</span><span class="n">05</span></div>
+  <h2>A lead nobody else has: the driver who opted in.</h2>
+  <div class="bars" role="img" aria-label="Directional auto insurance lead prices: aged 3 to 8 dollars, shared 10 to 25, exclusive 55 to 75, opted-in driver unpriced">
+    <div class="bar"><span>Aged lead</span><div class="track"><div class="fill" style="left:2%;width:3.3%"></div></div><span class="v">$3–8</span></div>
+    <div class="bar"><span>Shared lead</span><div class="track"><div class="fill" style="left:6.7%;width:10%"></div></div><span class="v">$10–25</span></div>
+    <div class="bar"><span>Exclusive lead</span><div class="track"><div class="fill" style="left:36.7%;width:13.3%"></div></div><span class="v">$55–75</span></div>
+    <div class="bar hl"><span>Opted-in driver</span><div class="track"><div class="fill" style="left:50%;width:50%;opacity:.35"></div></div><span class="v">Unpriced</span></div>
   </div>
-  <div class="grid g3">
-    <div class="cell"><span class="num">12%</span><p>of drivers are enrolled in an insurer tracking program.</p></div>
-    <div class="cell"><span class="num">~70%</span><p>worry about the privacy of that data.</p></div>
-    <div class="cell"><span class="num">49%</span><p>are uncomfortable with data pulled without a clear opt-in.</p></div>
-  </div>
-  <p class="say">Carriers want driving data and most drivers won't hand it to them. We'd ask first, inside a product people want, before a carrier is involved. If that signal holds up, it's the most valuable filter on the lead. No buyer has priced it yet, and I'm not counting it in the numbers today.</p>
-  <p class="foot">Lead prices are directional ranges from lead-industry sources (<a href="https://www.leadgen-economy.com/blog/exclusive-vs-shared-leads-comparison/">Leadgen Economy</a>, <a href="https://elevarus.com/auto-insurance-leads-buyer-guide/">Elevarus</a>), not audited benchmarks. Bar scale $0 to $150. Driver sentiment: <a href="https://www.autoinsurance.com/research/telematics-usage-study/">AutoInsurance.com</a>, <a href="https://jerry.ai/studies/2026-state-of-the-american-driver-report/">Jerry 2026</a>. Regulators act on driving data taken without consent (<a href="https://search.ftc.gov/news-events/news/press-releases/2026/01/ftc-finalizes-order-settling-allegations-gm-onstar-collected-sold-geolocation-data-without-consumers">FTC on GM/OnStar</a>, <a href="https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-sues-allstate-and-arity-unlawfully-collecting-using-and-selling-over-45">Texas v. Allstate/Arity</a>). The data tier needs an app and explicit opt-in.</p>
+  <p class="say">Only 12% of drivers let an insurer track them, and 70% worry about privacy. We'd ask first, inside a product they like. Not in today's numbers.</p>
+  <p class="foot">Lead prices are directional (<a href="https://www.leadgen-economy.com/blog/exclusive-vs-shared-leads-comparison/">Leadgen Economy</a>, <a href="https://elevarus.com/auto-insurance-leads-buyer-guide/">Elevarus</a>); scale $0 to $150. 12% and 70%: <a href="https://www.autoinsurance.com/research/telematics-usage-study/">AutoInsurance.com</a>. Needs an app and explicit opt-in.</p>
 </section>
 
 <!-- 6 -->
 <section id="model">
-  <div class="eyebrow"><span>Run your own numbers</span><span class="n">06</span></div>
-  <h2>Value per buyer, year one. Plug in our real EPL.</h2>
+  <div class="eyebrow"><span>Run the numbers</span><span class="n">06</span></div>
+  <h2>What one buyer is worth in year one.</h2>
   <div class="calc">
     <form class="inputs" id="calc" autocomplete="off">
       <h3>Inputs <span style="font-weight:400;color:var(--muted)">(EPL and CPL are October actuals)</span></h3>
       <span class="group">Product</span>
       <div class="field"><label for="price">Kit price</label><div class="box"><span>$</span><input id="price" type="number" step="1" min="0" value="25"></div></div>
-      <div class="field"><label for="cogs">Landed cost per kit<small>Cost sheet range $9–23</small></label><div class="box"><span>$</span><input id="cogs" type="number" step="1" min="0" value="16"></div></div>
-      <div class="field"><label for="refills">Refills bought per year<small>Benchmark ~6; example is cautious</small></label><div class="box"><input id="refills" type="number" step="1" min="0" value="2"></div></div>
-      <div class="field"><label for="rmargin">Margin per refill<small>Refill price not set yet</small></label><div class="box"><span>$</span><input id="rmargin" type="number" step="1" min="0" value="5"></div></div>
+      <div class="field"><label for="cogs">Landed cost per kit<small>Estimate $9–23</small></label><div class="box"><span>$</span><input id="cogs" type="number" step="1" min="0" value="16"></div></div>
+      <div class="field"><label for="refills">Refills bought per year</label><div class="box"><input id="refills" type="number" step="1" min="0" value="2"></div></div>
+      <div class="field"><label for="rmargin">Margin per refill</label><div class="box"><span>$</span><input id="rmargin" type="number" step="1" min="0" value="5"></div></div>
       <span class="group">Lead</span>
-      <div class="field"><label for="windows">Shopping windows per year<small>6-month terms = 2</small></label><div class="box"><input id="windows" type="number" step="1" min="0" value="2"></div></div>
-      <div class="field"><label for="capture">Share we convert to a sold lead, per window<small>Consented, in market, submits</small></label><div class="box"><input id="capture" type="number" step="1" min="0" max="100" value="15"><span>%</span></div></div>
+      <div class="field"><label for="windows">Shopping windows per year</label><div class="box"><input id="windows" type="number" step="1" min="0" value="2"></div></div>
+      <div class="field"><label for="capture">Sold as a lead, per window</label><div class="box"><input id="capture" type="number" step="1" min="0" max="100" value="15"><span>%</span></div></div>
       <div class="field"><label for="epl">Our EPL<small>October, blended auto</small></label><div class="box"><span>$</span><input id="epl" type="number" step="0.01" min="0" value="26.47"></div></div>
       <span class="group">Compare</span>
       <div class="field"><label for="cpl">Our CPL today<small>October, blended auto</small></label><div class="box"><span>$</span><input id="cpl" type="number" step="0.01" min="0" value="20.33"></div></div>
-      <div class="field"><label for="buyers">Kit buyers<small>321 = 3% of the 10,698</small></label><div class="box"><input id="buyers" type="number" step="1" min="0" value="321"></div></div>
-      <button type="button" class="reset" id="reset">Reset to examples</button>
+      <div class="field"><label for="buyers">Kit buyers<small>500 = the preorder goal</small></label><div class="box"><input id="buyers" type="number" step="1" min="0" value="500"></div></div>
+      <button type="button" class="reset" id="reset">Reset</button>
     </form>
     <div class="out" aria-live="polite">
       <div class="headline">
         <span class="num" id="perBuyer">$0</span>
-        <p>margin per buyer in year one, before any premium data tier</p>
+        <p>per buyer, year one</p>
       </div>
       <div class="ledger">
         <div><span>Kit margin</span><span id="oKit"></span></div>
         <div><span>Refill margin</span><span id="oRefill"></span></div>
-        <div><span>Lead revenue (EPL × windows × convert rate)</span><span id="oLead"></span></div>
+        <div><span>Lead revenue</span><span id="oLead"></span></div>
         <div class="total"><span>Per buyer, year one</span><span id="oTotal"></span></div>
         <div><span>Effective CPL</span><span id="oCpl"></span></div>
         <div class="total"><span id="oCohortLbl">Cohort total</span><span id="oCohort"></span></div>
@@ -278,50 +289,67 @@ a{color:var(--blue)}
       <div class="vs" id="vs"></div>
     </div>
   </div>
-  <p class="foot">This is a model, not a forecast. EPL and CPL are October blended auto actuals (Facebook $23.33 / $20.07, Google $27.09 / $24.52). The other defaults are examples to replace with a supplier quote, a refill price and the convert rate we measure. Revenue only; fulfillment, payment fees and staff time are not included.</p>
+  <p class="foot">A model, not a forecast. Facebook: $23.33 EPL / $20.07 CPL. Google: $27.09 / $24.52. Unit cost, refills and the lead rate are examples until we measure them.</p>
 </section>
 
 <!-- 7 -->
 <section>
-  <div class="eyebrow"><span>What's proven, what this week proves</span><span class="n">07</span></div>
-  <h2>Here's exactly what we know and what we don't.</h2>
+  <div class="eyebrow"><span>What we know</span><span class="n">07</span></div>
+  <h2>Known, and still to prove.</h2>
   <div class="score">
-    <div class="row"><span><span class="pill good">Known</span></span><span class="q">Drivers shop insurance constantly</span><span class="a">53% recently shopped; switching at a record. The demand side of our business is strong.</span></div>
-    <div class="row"><span><span class="pill good">Known</span></span><span class="q">This audience pays us</span><span class="a">1,688 buyers on the store. The scent booster sold 114 orders at $28.</span></div>
-    <div class="row"><span><span class="pill good">Known</span></span><span class="q">Our lead margin is thin</span><span class="a">October auto: $6.14 net per lead (23%). Google: $2.57 (9%). Any CPL rise eats it.</span></div>
-    <div class="row"><span><span class="pill good">Known</span></span><span class="q">Drivers resist insurer tracking</span><span class="a">12% enrolled, ~70% worried. Opt-in first is the open position.</span></div>
-    <div class="row"><span><span class="pill warn">This week</span></span><span class="q">Will they pay $25 for it?</span><span class="a">The preorder test. Pass mark agreed with you before we spend.</span></div>
-    <div class="row"><span><span class="pill warn">This week</span></span><span class="q">What does a unit cost?</span><span class="a">$400 of samples and quotes turns the $9–23 range into a number.</span></div>
-    <div class="row"><span><span class="pill bad">Unproven</span></span><span class="q">Do buyers re-engage and convert as leads?</span><span class="a">Measured on the first run: refill rate and lead submits per buyer.</span></div>
-    <div class="row"><span><span class="pill bad">Unproven</span></span><span class="q">Will a buyer pay more for an opted-in driver?</span><span class="a">Needs the app and one buyer to price it. Not in today's numbers.</span></div>
-    <div class="row"><span><span class="pill bad">Unproven</span></span><span class="q">Does it reduce phone use?</span><span class="a">Needed before "saves lives" runs in paid ads. First run includes a simple measure.</span></div>
+    <div class="row"><span><span class="pill good">Known</span></span><span class="q">These drivers pay us</span><span class="a">1,688 buyers. 114 bought a car scent.</span></div>
+    <div class="row"><span><span class="pill good">Known</span></span><span class="q">The problem is huge</span><span class="a">37% of drivers read texts while driving.</span></div>
+    <div class="row"><span><span class="pill good">Known</span></span><span class="q">Our lead margin is thin</span><span class="a">$6.14 per lead. $2.57 on Google.</span></div>
+    <div class="row"><span><span class="pill warn">Next 7 days</span></span><span class="q">Will they preorder it?</span><span class="a">Goal: 500.</span></div>
+    <div class="row"><span><span class="pill bad">Later</span></span><span class="q">Unit cost, refills, lead rate</span><span class="a">Measured once it ships.</span></div>
+    <div class="row"><span><span class="pill bad">Later</span></span><span class="q">Does it cut phone use?</span><span class="a">Needed before "saves lives" runs in ads.</span></div>
   </div>
 </section>
 
 <!-- 8 -->
 <section>
   <div class="eyebrow"><span>If we move forward</span><span class="n">08</span></div>
-  <h2>What happens next</h2>
-  <div class="gates">
-    <div class="gate now"><span class="tag">1 · This week</span><span class="num">Lock a supplier</span><p>Samples and a ship date in writing.</p></div>
-    <div class="gate"><span class="tag">2 · Nov 13–16</span><span class="num">Offer it</span><p>To everyone already signed up, with giveaway entries.</p></div>
-    <div class="gate"><span class="tag">3 · After Nov 16</span><span class="num">Offer it again</span><p>No prize attached. Do they want the product itself?</p></div>
-    <div class="gate"><span class="tag">4 · Nov 23</span><span class="num">Read the numbers</span><p>Together. Decide on a first run.</p></div>
+  <h2>Prove demand in 7 days.</h2>
+  <div class="grid g2" style="align-items:end">
+    <div class="goalnum">500<small>refundable preorders</small></div>
+    <div class="grid" style="gap:14px">
+      <div class="cell"><p><b style="color:var(--ink)">One first production run.</b> About 500 units of a stock diffuser with our logo.</p></div>
+      <div class="cell"><p><b style="color:var(--ink)">4.7% of the people already signed up.</b> Ambitious, reachable with the giveaway's final week behind it.</p></div>
+      <div class="cell"><p><b style="color:var(--ink)">$12,500 at $25.</b> Enough to fund that run.</p></div>
+    </div>
+  </div>
+  <div>
+    <div class="traj" role="img" aria-label="Cumulative preorder targets: day 1 100, day 2 175, day 3 225, day 4 265, day 5 310, day 6 380, day 7 500">
+      <div class="col"><span class="v">100</span><div class="b" style="height:17%"></div></div>
+      <div class="col check"><span class="v">175</span><div class="b" style="height:29.75%"></div></div>
+      <div class="col"><span class="v">225</span><div class="b" style="height:38.25%"></div></div>
+      <div class="col"><span class="v">265</span><div class="b" style="height:45%"></div></div>
+      <div class="col"><span class="v">310</span><div class="b" style="height:52.7%"></div></div>
+      <div class="col"><span class="v">380</span><div class="b" style="height:64.6%"></div></div>
+      <div class="col goal"><span class="v">500</span><div class="b" style="height:85%"></div></div>
+    </div>
+    <div class="trajx" style="margin-top:8px"><span>Day 1</span><span>Day 2</span><span>Day 3</span><span>Day 4</span><span>Day 5</span><span>Day 6</span><span>Day 7</span></div>
+  </div>
+  <p class="say">Day 2 is the checkpoint. Campaigns that hit their goal usually have about a third of it in the first 48 hours. Under 150 by day 2, we change the offer, not the goal.</p>
+  <div class="grid g2">
+    <div class="outcome"><span class="tag">Hit 500</span><b>Find a supplier.</b><span>Samples, a quote, a ship date.</span></div>
+    <div class="outcome miss"><span class="tag">Miss</span><b>Refund everyone.</b><span>We learned it cheaply, and keep the waitlist.</span></div>
   </div>
   <p class="ask">Do we move forward?</p>
-  <p class="foot">No ship date, no sales: the page runs as a waitlist instead.</p>
+  <p class="foot">Preorder terms state the goal, the deadline and a full refund if we miss. Taking payment before a supplier is confirmed needs counsel's sign-off first. Giveaway entries need the administrator's approval.</p>
 </section>
 
 <section>
   <div class="eyebrow"><span>Sources</span><span class="n"></span></div>
   <ol class="sources">
+    <li><a href="https://aaafoundation.org/wp-content/uploads/2026/01/202412-AAAFTS-2023-Traffic-Safety-Culture-Index.pdf">AAA Foundation, 2023 Traffic Safety Culture Index</a></li>
+    <li><a href="https://documents.ncsl.org/wwwncsl/Transportation/CMT-2023-Distracted-Driving-Report.pdf">Cambridge Mobile Telematics, 2023 Distracted Driving Report</a></li>
     <li><a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813790">NHTSA, Distracted Driving in 2024</a></li>
+    <li><a href="https://insurance.com/auto-insurance/auto-insurance-basics/texting-tickets.html">Insurance.com, texting tickets and rates</a></li>
     <li><a href="https://www.jdpower.com/business/us-insurance-shopping-insights">J.D. Power, U.S. Insurance Shopping Insights</a></li>
-    <li><a href="https://www.insurancebusinessmag.com/us/news/auto-motor/auto-switching-hits-record-high-as-personal-lines-shopping-levels-off-594727.aspx">Insurance Business, auto switching hits record high (Q3 2026)</a></li>
-    <li><a href="https://www.leadgen-economy.com/blog/exclusive-vs-shared-leads-comparison/">Leadgen Economy, exclusive vs shared leads</a> · <a href="https://elevarus.com/auto-insurance-leads-buyer-guide/">Elevarus, auto insurance leads buyer's guide</a></li>
-    <li><a href="https://www.autoinsurance.com/research/telematics-usage-study/">AutoInsurance.com telematics study</a> · <a href="https://jerry.ai/studies/2026-state-of-the-american-driver-report/">Jerry 2026 driver report</a></li>
-    <li><a href="https://reports.mintel.com/display/679733/">Mintel, air freshener refill replacement (2014)</a></li>
-    <li><a href="https://search.ftc.gov/news-events/news/press-releases/2026/01/ftc-finalizes-order-settling-allegations-gm-onstar-collected-sold-geolocation-data-without-consumers">FTC order on GM and OnStar</a> · <a href="https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-sues-allstate-and-arity-unlawfully-collecting-using-and-selling-over-45">Texas Attorney General v. Allstate and Arity</a></li>
+    <li><a href="https://www.leadgen-economy.com/blog/exclusive-vs-shared-leads-comparison/">Leadgen Economy</a> · <a href="https://elevarus.com/auto-insurance-leads-buyer-guide/">Elevarus</a></li>
+    <li><a href="https://www.autoinsurance.com/research/telematics-usage-study/">AutoInsurance.com telematics study</a></li>
+    <li><a href="https://reports.mintel.com/display/679733/">Mintel, refill replacement (2014)</a></li>
     <li><a href="https://certified.promotrust.com/SaveMaxAutoLLC/SMAGiveaway1/rules">Official giveaway rules</a></li>
   </ol>
 </section>
