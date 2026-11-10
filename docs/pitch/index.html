@@ -1,0 +1,349 @@
+<title>Save Max Lives Pitch</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a scroll deck. Each section is one "slide" with an eyebrow, a headline and one proof block. Brand-matched to the existing deck: stone, ink, Save Max blue. */
+:root{
+  --bg:#FAF9F6; --panel:#F0EEE9; --ink:#111214; --muted:#5E6166; --line:#DEDBD4;
+  --blue:#2F66B3; --blue-soft:#E4ECF7; --good:#1F7A4D; --good-soft:#E2F1E9; --warn:#9A6A12; --warn-soft:#F6EDDA; --bad:#A33B2E; --bad-soft:#F6E3E0;
+  --stone:#D9D4CB;
+  --display:"Inter Tight","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E0F11; --panel:#17191C; --ink:#F2F1EE; --muted:#9EA2A8; --line:#2A2D31;
+  --blue:#7FA8E8; --blue-soft:#1A2433; --good:#5BC28D; --good-soft:#15271E; --warn:#E0B45C; --warn-soft:#2A2213; --bad:#E7887A; --bad-soft:#2E1A17;
+  --stone:#3A3833; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E0F11; --panel:#17191C; --ink:#F2F1EE; --muted:#9EA2A8; --line:#2A2D31;
+  --blue:#7FA8E8; --blue-soft:#1A2433; --good:#5BC28D; --good-soft:#15271E; --warn:#E0B45C; --warn-soft:#2A2213; --bad:#E7887A; --bad-soft:#2E1A17;
+  --stone:#3A3833; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto}
+section{padding-block:72px;border-bottom:1px solid var(--line);display:grid;gap:28px}
+section:last-of-type{border-bottom:0}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:12px}
+.eyebrow .n{font-family:var(--mono);letter-spacing:0}
+h1,h2{font-family:var(--display);font-weight:800;letter-spacing:-.025em;text-wrap:balance;margin:0}
+h1{font-size:clamp(44px,8vw,92px);line-height:.98}
+h2{font-size:clamp(32px,5vw,54px);line-height:1.04;max-width:20ch}
+h3{font:700 19px/1.25 var(--display);margin:0;letter-spacing:-.01em}
+p{margin:0;max-width:64ch}
+.lede{font-size:clamp(18px,2.2vw,22px);color:var(--muted);max-width:52ch}
+.lede b,.lede strong{color:var(--ink);font-weight:600}
+.say{border-left:3px solid var(--blue);padding:4px 0 4px 18px;font-size:18px;max-width:62ch}
+.say::before{content:"Say it";display:block;font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.num{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.foot{font-size:12.5px;color:var(--muted);max-width:none}
+.foot a{color:var(--muted)}
+a{color:var(--blue)}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.g2,.g3{grid-template-columns:1fr}}
+
+/* hero */
+.hero{padding-block:88px 72px}
+.hero .stat{display:flex;gap:40px;flex-wrap:wrap;align-items:flex-end}
+.hero .stat .num{font-size:clamp(48px,7vw,76px);line-height:1}
+.hero .stat small{display:block;color:var(--muted);font-size:15px;margin-top:6px}
+
+/* model compare */
+.model{border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:16px;background:var(--bg)}
+.model.new{border-color:var(--blue);background:var(--blue-soft)}
+.model .tag{font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.model.new .tag{color:var(--blue)}
+.flow{display:grid;gap:10px;font-family:var(--mono);font-size:14px}
+.flow div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.flow div:last-child{border-bottom:0;padding-bottom:0;font-weight:500}
+.neg{color:var(--bad)} .pos{color:var(--good)}
+.big{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.02em}
+
+/* bars */
+.bars{display:grid;gap:14px}
+.bar{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 92px;gap:14px;align-items:center;font-size:14px}
+.bar .track{height:14px;background:var(--panel);border-radius:3px;position:relative;overflow:hidden}
+.bar .fill{position:absolute;top:0;bottom:0;background:var(--stone);border-radius:3px}
+.bar.hl .fill{background:var(--blue)}
+.bar .v{font-family:var(--mono);font-size:13px;text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.bar{grid-template-columns:1fr 84px}.bar .track{grid-column:1/-1;grid-row:2}}
+
+/* stat cells */
+.cell{display:grid;gap:6px;align-content:start}
+.cell .num{font-size:44px;line-height:1}
+.cell p{color:var(--muted);font-size:15px}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:28px;align-items:start}
+@media (max-width:860px){.calc{grid-template-columns:1fr}}
+.inputs{display:grid;gap:14px;background:var(--panel);border-radius:10px;padding:22px}
+.inputs h3{font-size:15px}
+.field{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:12px;align-items:center;font-size:14px}
+.field label{color:var(--ink)}
+.field label small{display:block;color:var(--muted);font-size:12px}
+.field .box{display:flex;align-items:center;border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:0 8px}
+.field .box span{color:var(--muted);font-family:var(--mono);font-size:13px}
+.field input{width:100%;border:0;background:transparent;color:var(--ink);font:500 15px var(--mono);padding:8px 2px;text-align:right;font-variant-numeric:tabular-nums}
+.field input:focus{outline:none}
+.field .box:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.group{font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:8px;border-top:1px solid var(--line)}
+.group:first-of-type{border-top:0;padding-top:0}
+.out{display:grid;gap:18px}
+.out .headline{display:grid;gap:4px}
+.out .headline .num{font-size:clamp(44px,6vw,64px);line-height:1}
+.out .headline p{color:var(--muted)}
+.ledger{display:grid;font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums}
+.ledger div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.ledger div.total{font-weight:500;border-bottom:0;border-top:2px solid var(--ink)}
+.ledger div span:first-child{font-family:var(--body);color:var(--muted)}
+.ledger div.total span:first-child{color:var(--ink);font-weight:600}
+.vs{border-radius:10px;padding:16px 18px;background:var(--good-soft);color:var(--ink);font-size:15px}
+.vs b{color:var(--good)}
+.vs.lose{background:var(--bad-soft)} .vs.lose b{color:var(--bad)}
+.reset{justify-self:start;font:500 13px var(--body);color:var(--blue);background:none;border:1px solid var(--line);border-radius:6px;padding:7px 12px;cursor:pointer}
+.reset:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* scorecard */
+.score{display:grid;gap:0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,1.2fr);gap:18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;align-items:start}
+.row .q{font-weight:600}
+.row .a{color:var(--muted)}
+.pill{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border-radius:999px;white-space:nowrap}
+.pill.good{background:var(--good-soft);color:var(--good)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+@media (max-width:680px){.row{grid-template-columns:1fr;gap:6px}}
+
+/* gates */
+.gates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gate{padding:20px;display:grid;gap:8px;align-content:start;border-right:1px solid var(--line)}
+.gate:last-child{border-right:0}
+.gate.now{background:var(--blue-soft)}
+.gate .tag{font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.gate.now .tag{color:var(--blue)}
+.gate .num{font-size:24px}
+.gate p{font-size:14px;color:var(--muted)}
+.gate p b{color:var(--ink);font-weight:600}
+@media (max-width:860px){.gates{grid-template-columns:1fr 1fr}.gate:nth-child(2){border-right:0}.gate:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (max-width:520px){.gates{grid-template-columns:1fr}.gate{border-right:0;border-bottom:1px solid var(--line)}.gate:last-child{border-bottom:0}}
+
+.ask{font-family:var(--display);font-weight:700;font-size:clamp(24px,3.4vw,34px);line-height:1.2;letter-spacing:-.015em;max-width:30ch;text-wrap:balance}
+.sources{font-size:13px;color:var(--muted);display:grid;gap:6px;padding-left:18px;margin:0}
+.sources a{color:var(--muted)}
+</style>
+
+<div class="wrap">
+
+<!-- 1 -->
+<section class="hero">
+  <div class="eyebrow"><span>Save Max Auto · Proposal for Russ · Nov 10, 2026</span><span class="n">01</span></div>
+  <h1>The car freshener that saves lives.</h1>
+  <p class="lede">And the first lead source we <strong>get paid to acquire</strong>.</p>
+  <div class="stat">
+    <div><span class="num">3,208</span><small>deaths in 2024 in crashes involving a distracted driver</small></div>
+    <div><span class="num">~9</span><small>a day</small></div>
+  </div>
+  <p class="say">Every time you get in the car, it's the cue to put the phone away. That's the product. Now let me show you why it's the best lead business we could own.</p>
+  <p class="foot">Source: <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813790">NHTSA, Distracted Driving in 2024</a>. "Saves lives" is the purpose; its effect on driving is not yet tested.</p>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="eyebrow"><span>The problem in our P&amp;L</span><span class="n">02</span></div>
+  <h2>We rent our audience. Every campaign starts at zero.</h2>
+  <div class="grid g3">
+    <div class="cell"><span class="num">10,698</span><p>signed up on the giveaway store. We paid for every one.</p></div>
+    <div class="cell"><span class="num">1,688</span><p>bought something. Proof they'll pay us, not just fill a form.</p></div>
+    <div class="cell"><span class="num">Nov 16</span><p>the giveaway closes. After that, nothing brings them back. The next campaign buys them again.</p></div>
+  </div>
+  <p class="say">Our model is buy traffic, capture a form, sell the lead once. Our margin is EPL minus CPL, one shot per person. When the campaign ends the asset is gone.</p>
+  <p class="foot">Customer accounts and buyers on raptor.savemaxauto.com, Sept 28 to Nov 9, 2026. The administrator's entrant count is the official figure.</p>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="eyebrow"><span>The thesis</span><span class="n">03</span></div>
+  <h2>Flip the CPL. The customer pays us to become the lead.</h2>
+  <div class="grid g2">
+    <div class="model">
+      <span class="tag">Today: form-fill lead</span>
+      <div class="flow">
+        <div><span>We pay to acquire</span><span class="neg">−CPL</span></div>
+        <div><span>We sell it</span><span class="pos">+EPL, once</span></div>
+        <div><span>After the sale</span><span>No reason to come back</span></div>
+        <div><span>Margin per person</span><span>EPL − CPL</span></div>
+      </div>
+    </div>
+    <div class="model new">
+      <span class="tag">Proposed: product-led lead</span>
+      <div class="flow">
+        <div><span>Driver buys the kit at $25</span><span class="pos">+$2 to +$16</span></div>
+        <div><span>Refills, every ~2 months</span><span class="pos">+margin, again</span></div>
+        <div><span>Each insurance shopping window</span><span class="pos">+EPL, again</span></div>
+        <div><span>Margin per person</span><span>Product + refills + EPL × windows</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="say">Today the lead costs us money before we earn anything. With this, the lead pays us first. Every EPL dollar after that is margin with no acquisition cost against it.</p>
+  <p class="foot">Kit contribution uses the cost sheet's landed range of about $9 to $23 per unit (published listings, not quotes). Refill cadence: <a href="https://reports.mintel.com/display/679733/">Mintel</a> consumer research found refills mostly replaced about every two months (dated 2014; a benchmark, not our data). Selling a lead requires consent language at checkout that counsel signs off.</p>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="eyebrow"><span>Why a lead that stays is worth more</span><span class="n">04</span></div>
+  <h2>Half of drivers shop every year. We'd be in the car when they do.</h2>
+  <div class="grid g3">
+    <div class="cell"><span class="num">53%</span><p>of auto insurance customers recently shopped their policy.</p></div>
+    <div class="cell"><span class="num">Record</span><p>switching in Q3 2026: more Americans switched personal-lines insurers than at any point on record.</p></div>
+    <div class="cell"><span class="num">6 mo</span><p>typical auto policy term. A renewal is a fresh shopping trigger, twice a year.</p></div>
+  </div>
+  <p class="say">A form-fill lead is worth full price for about a week, then it's aged inventory. A driver who has our product on the vent and buys refills is someone we can reach, with permission, every time they're in market. That's a renewable lead, not a one-time sale.</p>
+  <p class="foot">Source: <a href="https://www.jdpower.com/business/us-insurance-shopping-insights">J.D. Power U.S. Insurance Shopping Insights</a>; <a href="https://www.insurancebusinessmag.com/us/news/auto-motor/auto-switching-hits-record-high-as-personal-lines-shopping-levels-off-594727.aspx">Insurance Business, Q3 2026 LIST report</a>.</p>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="eyebrow"><span>The premium tier, later</span><span class="n">05</span></div>
+  <h2>A lead filter nobody sells today: the driver who opted in.</h2>
+  <div class="bars" role="img" aria-label="Directional auto insurance lead prices: aged 3 to 8 dollars, shared 10 to 25, exclusive 55 to 75, opted-in driver signal unpriced">
+    <div class="bar"><span>Aged / data lead</span><div class="track"><div class="fill" style="left:2%;width:3.3%"></div></div><span class="v">$3–8</span></div>
+    <div class="bar"><span>Shared web lead</span><div class="track"><div class="fill" style="left:6.7%;width:10%"></div></div><span class="v">$10–25</span></div>
+    <div class="bar"><span>Exclusive web lead</span><div class="track"><div class="fill" style="left:36.7%;width:13.3%"></div></div><span class="v">$55–75</span></div>
+    <div class="bar hl"><span>Exclusive + opted-in driving signal</span><div class="track"><div class="fill" style="left:50%;width:50%;opacity:.35"></div></div><span class="v">Unpriced</span></div>
+  </div>
+  <div class="grid g3">
+    <div class="cell"><span class="num">12%</span><p>of drivers are enrolled in an insurer tracking program.</p></div>
+    <div class="cell"><span class="num">~70%</span><p>worry about the privacy of that data.</p></div>
+    <div class="cell"><span class="num">49%</span><p>are uncomfortable with data pulled without a clear opt-in.</p></div>
+  </div>
+  <p class="say">Carriers want driving data and most drivers won't hand it to them. We'd ask first, inside a product people want, before a carrier is involved. If that signal holds up, it's the most valuable filter on the lead. No buyer has priced it yet, and I'm not counting it in the numbers today.</p>
+  <p class="foot">Lead prices are directional ranges from lead-industry sources (<a href="https://www.leadgen-economy.com/blog/exclusive-vs-shared-leads-comparison/">Leadgen Economy</a>, <a href="https://elevarus.com/auto-insurance-leads-buyer-guide/">Elevarus</a>), not audited benchmarks. Bar scale $0 to $150. Driver sentiment: <a href="https://www.autoinsurance.com/research/telematics-usage-study/">AutoInsurance.com</a>, <a href="https://jerry.ai/studies/2026-state-of-the-american-driver-report/">Jerry 2026</a>. Regulators act on driving data taken without consent (<a href="https://search.ftc.gov/news-events/news/press-releases/2026/01/ftc-finalizes-order-settling-allegations-gm-onstar-collected-sold-geolocation-data-without-consumers">FTC on GM/OnStar</a>, <a href="https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-sues-allstate-and-arity-unlawfully-collecting-using-and-selling-over-45">Texas v. Allstate/Arity</a>). The data tier needs an app and explicit opt-in.</p>
+</section>
+
+<!-- 6 -->
+<section id="model">
+  <div class="eyebrow"><span>Run your own numbers</span><span class="n">06</span></div>
+  <h2>Value per buyer, year one. Plug in our real EPL.</h2>
+  <div class="calc">
+    <form class="inputs" id="calc" autocomplete="off">
+      <h3>Inputs <span style="font-weight:400;color:var(--muted)">(defaults are examples)</span></h3>
+      <span class="group">Product</span>
+      <div class="field"><label for="price">Kit price</label><div class="box"><span>$</span><input id="price" type="number" step="1" min="0" value="25"></div></div>
+      <div class="field"><label for="cogs">Landed cost per kit<small>Cost sheet range $9–23</small></label><div class="box"><span>$</span><input id="cogs" type="number" step="1" min="0" value="16"></div></div>
+      <div class="field"><label for="refills">Refills bought per year<small>Benchmark ~6; example is cautious</small></label><div class="box"><input id="refills" type="number" step="1" min="0" value="2"></div></div>
+      <div class="field"><label for="rmargin">Margin per refill<small>Refill price not set yet</small></label><div class="box"><span>$</span><input id="rmargin" type="number" step="1" min="0" value="5"></div></div>
+      <span class="group">Lead</span>
+      <div class="field"><label for="windows">Shopping windows per year<small>6-month terms = 2</small></label><div class="box"><input id="windows" type="number" step="1" min="0" value="2"></div></div>
+      <div class="field"><label for="capture">Share we convert to a sold lead, per window<small>Consented, in market, submits</small></label><div class="box"><input id="capture" type="number" step="1" min="0" max="100" value="15"><span>%</span></div></div>
+      <div class="field"><label for="epl">Our EPL<small>Replace with the real number</small></label><div class="box"><span>$</span><input id="epl" type="number" step="1" min="0" value="20"></div></div>
+      <span class="group">Compare</span>
+      <div class="field"><label for="cpl">Our CPL today<small>Replace with the real number</small></label><div class="box"><span>$</span><input id="cpl" type="number" step="1" min="0" value="12"></div></div>
+      <div class="field"><label for="buyers">Kit buyers<small>321 = 3% of the 10,698</small></label><div class="box"><input id="buyers" type="number" step="1" min="0" value="321"></div></div>
+      <button type="button" class="reset" id="reset">Reset to examples</button>
+    </form>
+    <div class="out" aria-live="polite">
+      <div class="headline">
+        <span class="num" id="perBuyer">$0</span>
+        <p>margin per buyer in year one, before any premium data tier</p>
+      </div>
+      <div class="ledger">
+        <div><span>Kit margin</span><span id="oKit"></span></div>
+        <div><span>Refill margin</span><span id="oRefill"></span></div>
+        <div><span>Lead revenue (EPL × windows × convert rate)</span><span id="oLead"></span></div>
+        <div class="total"><span>Per buyer, year one</span><span id="oTotal"></span></div>
+        <div><span>Effective CPL</span><span id="oCpl"></span></div>
+        <div class="total"><span id="oCohortLbl">Cohort total</span><span id="oCohort"></span></div>
+      </div>
+      <div class="vs" id="vs"></div>
+    </div>
+  </div>
+  <p class="foot">This is a model, not a forecast. Every default is an example to be replaced: our EPL and CPL, a supplier quote, and the convert rate we measure. Revenue only; fulfillment, payment fees and staff time are not included.</p>
+</section>
+
+<!-- 7 -->
+<section>
+  <div class="eyebrow"><span>What's proven, what this week proves</span><span class="n">07</span></div>
+  <h2>Here's exactly what we know and what we don't.</h2>
+  <div class="score">
+    <div class="row"><span><span class="pill good">Known</span></span><span class="q">Drivers shop insurance constantly</span><span class="a">53% recently shopped; switching at a record. The demand side of our business is strong.</span></div>
+    <div class="row"><span><span class="pill good">Known</span></span><span class="q">This audience pays us</span><span class="a">1,688 buyers on the store. The scent booster sold 114 orders at $28.</span></div>
+    <div class="row"><span><span class="pill good">Known</span></span><span class="q">Drivers resist insurer tracking</span><span class="a">12% enrolled, ~70% worried. Opt-in first is the open position.</span></div>
+    <div class="row"><span><span class="pill warn">This week</span></span><span class="q">Will they pay $25 for it?</span><span class="a">The preorder test. Pass mark agreed with you before we spend.</span></div>
+    <div class="row"><span><span class="pill warn">This week</span></span><span class="q">What does a unit cost?</span><span class="a">$400 of samples and quotes turns the $9–23 range into a number.</span></div>
+    <div class="row"><span><span class="pill bad">Unproven</span></span><span class="q">Do buyers re-engage and convert as leads?</span><span class="a">Measured on the first run: refill rate and lead submits per buyer.</span></div>
+    <div class="row"><span><span class="pill bad">Unproven</span></span><span class="q">Will a buyer pay more for an opted-in driver?</span><span class="a">Needs the app and one buyer to price it. Not in today's numbers.</span></div>
+    <div class="row"><span><span class="pill bad">Unproven</span></span><span class="q">Does it reduce phone use?</span><span class="a">Needed before "saves lives" runs in paid ads. First run includes a simple measure.</span></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section>
+  <div class="eyebrow"><span>The decision</span><span class="n">08</span></div>
+  <h2>$3,000 to find out. Every next dollar is earned by the last result.</h2>
+  <div class="gates">
+    <div class="gate now"><span class="tag">Now · this request</span><span class="num">$3,000</span><p><b>Prove they'll pay.</b> $1,500 now for samples and the page. $1,500 held until a supplier confirms a ship date and the administrator approves the entries.</p></div>
+    <div class="gate"><span class="tag">If preorders pass</span><span class="num">$5K–15K</span><p><b>First run</b> of ~500 stock units with our logo. Preorders offset it. Measures refills and lead submits.</p></div>
+    <div class="gate"><span class="tag">If buyers re-engage</span><span class="num">$30K–135K</span><p><b>Our own design</b> through first production. Owned product, owned margin.</p></div>
+    <div class="gate"><span class="tag">If a buyer prices the signal</span><span class="num">$35K–180K</span><p><b>The app</b> with opt-in driving data. The premium tier.</p></div>
+  </div>
+  <p class="ask">Can I spend up to $3,000 this week to put a $25 preorder, with 1,500 entries, in front of the people already signed up? We read the numbers together on November 16.</p>
+  <p class="say">I don't know whether this specific product is the answer. But we should spend a little money proving ideas work before we spend a lot hoping they will.</p>
+  <p class="foot">Estimates built from published ranges, not quotes. Sales open only if, by Thursday, a supplier confirms a ship date in writing, the administrator approves the entries, and the page shows the unit we will ship. Otherwise the page runs as a no-payment waitlist.</p>
+</section>
+
+<section>
+  <div class="eyebrow"><span>Sources</span><span class="n"></span></div>
+  <ol class="sources">
+    <li><a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813790">NHTSA, Distracted Driving in 2024</a></li>
+    <li><a href="https://www.jdpower.com/business/us-insurance-shopping-insights">J.D. Power, U.S. Insurance Shopping Insights</a></li>
+    <li><a href="https://www.insurancebusinessmag.com/us/news/auto-motor/auto-switching-hits-record-high-as-personal-lines-shopping-levels-off-594727.aspx">Insurance Business, auto switching hits record high (Q3 2026)</a></li>
+    <li><a href="https://www.leadgen-economy.com/blog/exclusive-vs-shared-leads-comparison/">Leadgen Economy, exclusive vs shared leads</a> · <a href="https://elevarus.com/auto-insurance-leads-buyer-guide/">Elevarus, auto insurance leads buyer's guide</a></li>
+    <li><a href="https://www.autoinsurance.com/research/telematics-usage-study/">AutoInsurance.com telematics study</a> · <a href="https://jerry.ai/studies/2026-state-of-the-american-driver-report/">Jerry 2026 driver report</a></li>
+    <li><a href="https://reports.mintel.com/display/679733/">Mintel, air freshener refill replacement (2014)</a></li>
+    <li><a href="https://search.ftc.gov/news-events/news/press-releases/2026/01/ftc-finalizes-order-settling-allegations-gm-onstar-collected-sold-geolocation-data-without-consumers">FTC order on GM and OnStar</a> · <a href="https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-sues-allstate-and-arity-unlawfully-collecting-using-and-selling-over-45">Texas Attorney General v. Allstate and Arity</a></li>
+    <li><a href="https://certified.promotrust.com/SaveMaxAutoLLC/SMAGiveaway1/rules">Official giveaway rules</a></li>
+  </ol>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var ids=["price","cogs","refills","rmargin","windows","capture","epl","cpl","buyers"];
+  var defaults={}; ids.forEach(function(i){defaults[i]=document.getElementById(i).value});
+  function v(i){var n=parseFloat(document.getElementById(i).value);return isFinite(n)?n:0}
+  function money(n,dp){var s=Math.abs(n).toLocaleString("en-US",{minimumFractionDigits:dp||0,maximumFractionDigits:dp||0});return (n<0?"−$":"$")+s}
+  function set(id,t){document.getElementById(id).textContent=t}
+  function calc(){
+    var kit=v("price")-v("cogs");
+    var refill=v("refills")*v("rmargin");
+    var lead=v("windows")*(v("capture")/100)*v("epl");
+    var total=kit+refill+lead;
+    var buyers=Math.max(0,Math.round(v("buyers")));
+    var today=v("epl")-v("cpl");
+    set("perBuyer",money(total,2));
+    set("oKit",money(kit,2)); set("oRefill",money(refill,2)); set("oLead",money(lead,2)); set("oTotal",money(total,2));
+    set("oCpl", kit>=0 ? money(-kit,2)+" (we're paid "+money(kit,2)+")" : money(-kit,2));
+    set("oCohortLbl","Total for "+buyers.toLocaleString("en-US")+" buyers");
+    set("oCohort",money(total*buyers));
+    var vs=document.getElementById("vs");
+    var mult= today>0 ? total/today : null;
+    if(total>=today){
+      vs.className="vs";
+      vs.innerHTML="Today a form-fill lead nets <b>"+money(today,2)+"</b> (EPL − CPL), once. A kit buyer nets <b>"+money(total,2)+"</b> in year one"+(mult&&mult>=1.05?", about <b>"+mult.toFixed(1)+"×</b>":"")+", and is still reachable next year.";
+    } else {
+      vs.className="vs lose";
+      vs.innerHTML="At these inputs a kit buyer nets <b>"+money(total,2)+"</b>, below a form-fill lead at <b>"+money(today,2)+"</b>. The model only works if the unit cost or the convert rate lands better than this.";
+    }
+  }
+  ids.forEach(function(i){document.getElementById(i).addEventListener("input",calc)});
+  document.getElementById("calc").addEventListener("submit",function(e){e.preventDefault()});
+  document.getElementById("reset").addEventListener("click",function(){ids.forEach(function(i){document.getElementById(i).value=defaults[i]});calc()});
+  calc();
+})();
+</script>
