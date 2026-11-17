@@ -105,6 +105,7 @@ B.update(app=True,
          active=(0.50, 0.35, 0.25),   # app-active share by customer-year (rewards keep people opening it)
          optin=0.40,                  # a reward for sharing nudges opt-in up a little
          scored=0.50,
+         premium=1.4,                 # safe-driver lead ~1.4x EPL: bind lift x LTV (Arity IQ, vendor); 1.0x floor, ~2x needs a filed score
          reward_cost=12.0,            # self-funded ~$11-12 a year per active driver who shares (partners fund ~70% of rewards)
          partner_rev=(6.0, 2.5, 2.5)) # Upside referral, car wash bounty (once); affiliate commissions ~$1-3/yr
 B_KITS = {2027: 15000, 2028: 50000, 2029: 120000}
