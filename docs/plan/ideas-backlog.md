@@ -48,6 +48,12 @@ Ideas worth revisiting later. Not part of the current plan or forecast.
 - Paco Rabanne Phantom (2021): an NFC tag in the spray cap, no battery, opens digital content. Same passive approach as our version 1. https://www.engadget.com/paco-rabanne-nfc-fragrance-robot-bottle-140040817.html
 - NXP describes beauty brands using secure NFC tags to prove products are genuine. A secure tag in each refill could stop knockoff refills and tell the app which scent is in. https://www.nxp.com/company/about-nxp/smarter-world-blog/BL-BEAUTY-PRODUCTS-SECURE-NFC-TAGS
 
+**Value to us (paths.py, Nov 17):**
+- Refill reminders, a day-part trio pack and a scent profile all aim at refill take (30% in the model) and app retention. They cost app work, not hardware.
+- Each 5 points of refill take adds about $2.45 per customer over 3 years ($39.05 to $41.50). At Path B's 120K kits in 2029, that's about $290K per year's customers.
+- Take of 35% plus a $27 trio pack: $46.34 per customer, up 19%. Test the price before using it.
+- Usage tracking adds nothing new for us: our tap already logs the start of a drive, which is worth more than a spray log.
+
 **Open questions:**
 - A tag in the body and another in the refill could sit on top of each other. Check whether a phone reads the right one.
 - Tap time and location over months show where someone drives. The same opt-in rules apply: off by default, its own switch, trimmed trip ends.
