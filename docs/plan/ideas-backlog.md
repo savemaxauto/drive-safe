@@ -22,3 +22,32 @@ Ideas worth revisiting later. Not part of the current plan or forecast.
 - App retention is about 2–7% of users after 30 days, and leads 30–90 days old resell for about $1.50–5.
 - Waiting six months for a ~$46 premium sale beats selling now at $26.47 only if more than ~57% of drivers are still engaged.
 - Ask for renewal month at checkout. Re-ask consent before each later sale ("Your policy renews next month. Want us to find you a better rate?").
+
+## Smart scent: three scents by time of day, and a tag that tracks use (logged Nov 17, 2026)
+
+**Source:** https://nfcwork.com/create-a-fragrance-profile-with-an-nfc-powered-smart-perfume-bottle/ (not opened from this session; a search didn't find it, so read it directly).
+
+**What's interesting:**
+- Three scents for different times of day.
+- A tag that tracks use. The article's flow: tap the bottle cap, sensors detect usage, the app receives time, location and frequency, then gives recommendations, adjusts the fragrance to mood, and sends refill reminders.
+
+**What works with version 1 (passive tag, no battery):**
+- Tap to open the app, and the app logs time and how often. Yes.
+- Location of each tap. Yes, but it comes from the phone, and only if the driver turned location on.
+- Tap count without our app. Yes: NTAG213 has a built-in tap counter that can be added to the tag's web link, so even a tap that opens a web page counts. The counter is plain text and can be copied, so it isn't proof of a real tap. https://nxp.com/docs/en/data-sheet/NTAG213_215_216.pdf
+- Refill reminders. Yes, from the install date and the 30-day scent life. The Home mockup already shows days left.
+- Recommendations. Yes, from the app side: which scents drivers keep, rate and reorder.
+- Three scents by time of day. Partly. Sell a three-scent refill pack (morning, afternoon, evening) and let the app suggest when to swap.
+
+**What needs the next version (battery and Bluetooth):**
+- Sensors in the freshener. A passive NFC tag has no sensors or power. It only answers when a phone is near.
+- One freshener holding three scents and switching by time of day. Needs three chambers and a powered pump or valve, which adds cost. Earlier work found the burst version only pays at about $35.
+- Adjusting scent to mood. Needs powered dispensing plus a mood signal. Inferring emotion is sensitive data. Asking the driver ("Rough drive?") or using the drive itself (heavy braking, late night) is safer than guessing feelings. Needs counsel before any test.
+
+**Precedents:**
+- Paco Rabanne Phantom (2021): an NFC tag in the spray cap, no battery, opens digital content. Same passive approach as our version 1. https://www.engadget.com/paco-rabanne-nfc-fragrance-robot-bottle-140040817.html
+- NXP describes beauty brands using secure NFC tags to prove products are genuine. A secure tag in each refill could stop knockoff refills and tell the app which scent is in. https://www.nxp.com/company/about-nxp/smarter-world-blog/BL-BEAUTY-PRODUCTS-SECURE-NFC-TAGS
+
+**Open questions:**
+- A tag in the body and another in the refill could sit on top of each other. Check whether a phone reads the right one.
+- Tap time and location over months show where someone drives. The same opt-in rules apply: off by default, its own switch, trimmed trip ends.
