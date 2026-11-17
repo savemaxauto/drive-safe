@@ -54,7 +54,7 @@ def fixed_b():
     for k, v in spread(15000, yr(2027, 1, 1)).items(): f[k] += v           # test
     for k, v in spread(40000, yr(2027, 1, 6)).items(): f[k] += v           # counsel
     for k, v in spread(70000, yr(2027, 4, 9)).items(): f[k] += v           # design, molds, prototypes
-    for k, v in spread(150000, yr(2027, 4, 9)).items(): f[k] += v          # app, rewards wallet, SDK
+    for k, v in spread(274000, yr(2027, 4, 9)).items(): f[k] += v          # app, backend, admin console (build_cost.py phase 1)
     for k, v in spread(190000, yr(2027, 4, 12)).items(): f[k] += v         # team from April
     for k, v in spread(6000, yr(2027, 10, 12)).items(): f[k] += v          # prize draws
     for k, v in spread(3000, yr(2027, 9, 9)).items(): f[k] += v            # prize draw rules

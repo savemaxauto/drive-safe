@@ -30,7 +30,7 @@ Partly. Carriers clearly pay more for drivers they expect to be safer, and pay e
 Value math (estimate): average premium $2,240; a safe driver with 25% lower loss cost and a 10% discount adds about $224 a year of profit, about $896 over four years. With bind rate rising from about 5.3% to 6.6% per lead, a safe-driver lead is worth about $76 more to the carrier.
 
 ## What it does to the plan
-At 1.0x Path B still pays back by Dec 2029 (peak cash about $476K). At 1.4x, Nov 2029 ($460K). At 2.0x, Oct 2029 ($439K). The premium is upside, not the floor.
+At 1.0x Path B still pays back by Jan 2030 (peak cash about $662K). At 1.4x, Dec 2029 ($643K). Updated Nov 17 with the full app build cost and the prize counter's reward cost. The premium is upside, not the floor.
 
 ## Questions for Ron (no confidential data)
 1. Beyond State Auto, did any carrier agree to bid differently for EverDrive drivers? If not, what reasons did they give: filing rules, trust in the score, volume or consent?

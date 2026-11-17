@@ -106,18 +106,21 @@ B.update(app=True,
          optin=0.40,                  # a reward for sharing nudges opt-in up a little
          scored=0.50,
          premium=1.4,                 # safe-driver lead ~1.4x EPL: bind lift x LTV (Arity IQ, vendor); 1.0x floor, ~2x needs a filed score
-         reward_cost=12.0,            # self-funded ~$11-12 a year per active driver who shares (partners fund ~70% of rewards)
+         reward_cost=4.0,             # prize counter (rewards.py): ~$2.76 expected per active driver; $4 leaves room for the club 2x perk. Worst case $9.53
          partner_rev=(6.0, 2.5, 2.5)) # Upside referral, car wash bounty (once); affiliate commissions ~$1-3/yr
 B_KITS = {2027: 15000, 2028: 50000, 2029: 120000}
 B_CAC = {2027: 6.0, 2028: 13.0, 2029: 15.0}       # own traffic first, then partner co-marketing and paid at <= $17
 B_FIXED = {
     2027: {'90-day test': 15000, 'Counsel: consent, privacy, sweepstakes': 40000,
-           'Product design, molds, prototypes': 70000, 'App + rewards wallet + driving SDK': 150000,
+           'Product design, molds, prototypes': 70000, 'App, backend, admin console (iPhone launch, build_cost.py)': 274000,
            'Team: owner, engineer (H2), partnerships (H2)': 190000, 'Monthly prize draws (full tank, tires, car washes)': 6000},
-    2028: {'App upkeep, SDK, rewards platform': 60000, 'Team: owner, engineer, partnerships, support': 450000,
-           'Compliance': 25000, 'Monthly prize draws (full tank, tires, car washes)': 30000, 'Prize draw rules and admin': 10000},
-    2029: {'App upkeep, SDK, rewards platform': 75000, 'Team: + carrier partnerships': 560000,
-           'Compliance': 25000, 'Monthly prize draws (full tank, tires, car washes)': 60000, 'Prize draw rules and admin': 10000},
+    2028: {'Android and growth features (build_cost.py phase 2)': 109000,
+           'App running costs: hosting, tools, security testing': 54000, 'SOC 2 and compliance': 45000,
+           'Team: owner, engineer (maintains the app), partnerships, support': 450000,
+           'Monthly prize draws (full tank, tires, car washes)': 30000, 'Prize draw rules and admin': 10000},
+    2029: {'App running costs: hosting, tools, security testing': 54000, 'SOC 2 and compliance': 45000,
+           'Team: + carrier partnerships': 560000,
+           'Monthly prize draws (full tank, tires, car washes)': 60000, 'Prize draw rules and admin': 10000},
 }
 
 def show(name, a, kits, cac, fixed):

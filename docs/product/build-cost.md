@@ -45,18 +45,15 @@ Bottom-up hours by feature, from `docs/plan/build_cost.py`. Rates are blended te
 If the in-house engineer the plan already pays for from 2028 does maintenance, the extra running cost is about $99K a year. That's close to the plan's $85K to $100K for upkeep and compliance.
 
 ## What it does to Path B
+The model now carries these costs (`paths.py` and `cash.py`, Nov 17). Phase 1 is $274K in 2027, phase 2 is $109K in 2028, and running costs are $99K a year with our engineer maintaining the app. Rewards are $4 a year per opted-in active driver, from the prize counter.
+
 | Case | Peak cash | Back to even | 3-year profit |
 |---|---|---|---|
-| Plan as it stands ($150K app) | $460K | Nov 2029 | $249K |
-| Real build, in-house engineer maintains | $702K | Jan 2030 | $2K |
-| Same, with rewards at the prize counter's expected cost | $680K | Dec 2029 | $206K |
-| Real build, agency maintains, rewards at expected cost | $729K | Jan 2030 | $57K |
+| Before: $150K app, $12 rewards | $460K | Nov 2029 | $249K |
+| Now: full app cost, $4 rewards | $643K | Dec 2029 | $207K |
+| Now, if the app runs 50% over | $780K | Jan 2030 | |
 
-**The plan's $150K app line is about half of what this feature set costs, even nearshore.** The honest fix:
-- Budget about $275K for the iPhone launch and about $110K for Android the next year.
-- Use the in-house engineer for upkeep.
-- Use the prize counter's lower reward cost ($4 a year instead of $12).
-- With all three, peak cash rises by about $220K, payback moves about a month, and 3-year profit stays close to plan.
+Peak cash rises by about $180K and payback moves a month. 2029 profit goes up, from $581K to $737K, because rewards cost less at 120,000 kits.
 
 ## Ways to spend less
 - Ship iPhone only until the app proves people keep using it. About 57% of US phones are iPhones, but Android buyers would wait for Drive Mode.

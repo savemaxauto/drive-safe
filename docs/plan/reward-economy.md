@@ -45,7 +45,7 @@ Draw entries aren't sold for points. They come from weekly goals and a free way 
 | Blended | | 4,765 | $46 | $2.76 | $9.53 |
 
 - Each 1,000 points used is worth about $12 to a driver and costs us about 72 cents, assuming 20% of points go unused and half of used points go to partner prizes, a quarter to our products and a quarter to gas cards.
-- Worst case means every point spent on gas cards with none left unused. Even then the blended cost, $9.53, is under the $12 a year that `paths.py` budgets. Expected cost is about $9 a year less per opted-in active driver.
+- Worst case means every point spent on gas cards with none left unused. Even then the blended cost, $9.53, is under the $12 a year the plan first budgeted. `paths.py` now uses $4 a year: the expected $2.76 plus room for the refill club's 2x perk.
 - Arcades aim to pay out 25 to 35% of what's played. An active driver brings in about $24 to $36 a year beyond the kit. Our expected cost is about 8 to 11% of that, and the worst case is about 26 to 39%, roughly an arcade's normal payout.
 - Unused points: 20% assumed (Dutch Bros reported about 16% in 2021; Bond Brand Loyalty cites about 30%; above 40% usually means rewards aren't compelling).
 

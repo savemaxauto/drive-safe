@@ -54,3 +54,7 @@ table{font-size:26px;color:var(--ink);width:100%}
 .card .num.bad{color:var(--red)}
 .card .num.good{color:var(--green)}
 .card .who{font-size:24px;font-weight:600;color:var(--green);margin-top:auto}
+.phone{background:#15171B;border-radius:44px;padding:10px;display:flex}
+.phone img{border-radius:34px;object-fit:contain}
+.cap{font-size:24px;line-height:1.3;text-align:center;width:320px;color:var(--soft)}
+.cap b{color:var(--ink)}

@@ -32,4 +32,4 @@ Assumes a driver who keeps a safe score, 6-month policies, 40 phone-free drives 
 | Deals and cash back | $3 | $8 | $15 | $30 | $60 | $90 |
 | Back so far | $3 | $8 | $23 | $169 | $522 | $921 |
 
-Refills cost us about $1.30 each plus postage. At about 3 a year that stays near the $12 a year self-funded reward cost in `paths.py`.
+Refills cost us about $1.30 each plus postage. At about 3 a year that fits inside the reward budget in `paths.py` (now $4 a year per opted-in active driver; see `reward-economy.md`).
