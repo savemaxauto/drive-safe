@@ -57,6 +57,7 @@ def fixed_b():
     for k, v in spread(150000, yr(2027, 4, 9)).items(): f[k] += v          # app, rewards wallet, SDK
     for k, v in spread(190000, yr(2027, 4, 12)).items(): f[k] += v         # team from April
     for k, v in spread(6000, yr(2027, 10, 12)).items(): f[k] += v          # prize draws
+    for k, v in spread(3000, yr(2027, 9, 9)).items(): f[k] += v            # prize draw rules
     for y in (2028, 2029, 2030):
         for k, v in spread(sum(P.B_FIXED[min(y, 2029)].values()), yr(y)).items(): f[k] += v
     return f

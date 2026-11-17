@@ -18,7 +18,7 @@ BASE = dict(
     fulfill=5.00,           # 3PL all-in $4.50-7.40 an order
     postage=5.50,
     pay_pct=0.029, pay_fix=0.30,
-    refill_take=0.30, refill_price=18.00, refill_cogs=2.40, refill_ship=8.75,
+    refill_take=0.30, refill_price=24.00, refill_cogs=3.90, refill_ship=8.75,   # 3 refills for $24 ($8 each; Drift $11.99, Pura $14.99); finished refill ~$1.30 each
     first_keep=0.73, quarter_keep=0.83,   # 26-28% churn at first renewal; ~6%/mo after
     optin=0.35,             # kit customers who opt in to insurance quotes (TEST #1)
     shop=0.50,              # opted-in customers who shop through us in a year
@@ -114,9 +114,9 @@ B_FIXED = {
            'Product design, molds, prototypes': 70000, 'App + rewards wallet + driving SDK': 150000,
            'Team: owner, engineer (H2), partnerships (H2)': 190000, 'Monthly prize draws (full tank, tires, car washes)': 6000},
     2028: {'App upkeep, SDK, rewards platform': 60000, 'Team: owner, engineer, partnerships, support': 450000,
-           'Compliance': 25000, 'Monthly prize draws (full tank, tires, car washes)': 30000},
+           'Compliance': 25000, 'Monthly prize draws (full tank, tires, car washes)': 30000, 'Prize draw rules and admin': 10000},
     2029: {'App upkeep, SDK, rewards platform': 75000, 'Team: + carrier partnerships': 560000,
-           'Compliance': 25000, 'Monthly prize draws (full tank, tires, car washes)': 60000},
+           'Compliance': 25000, 'Monthly prize draws (full tank, tires, car washes)': 60000, 'Prize draw rules and admin': 10000},
 }
 
 def show(name, a, kits, cac, fixed):
