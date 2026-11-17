@@ -7,7 +7,8 @@ Path B, Launch with rewards: Path A's test in Q1 2027, then (if it passes) our o
           rewards and paid growth.
 
 Run: python3 paths.py
-Every figure on the deck's numbers slides comes from this file.
+Per-customer values and the yearly view live here. The deck's profit, cash and payback
+figures come from cash.py, which runs these same values month by month.
 """
 import copy
 
