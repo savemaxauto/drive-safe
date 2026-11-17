@@ -25,7 +25,13 @@ Ideas worth revisiting later. Not part of the current plan or forecast.
 
 ## Smart scent: three scents by time of day, and a tag that tracks use (logged Nov 17, 2026)
 
-**Source:** https://nfcwork.com/create-a-fragrance-profile-with-an-nfc-powered-smart-perfume-bottle/ (not opened from this session; a search didn't find it, so read it directly).
+**Source:** https://nfcwork.com/create-a-fragrance-profile-with-an-nfc-powered-smart-perfume-bottle/ (read from a PDF of the page). It's a sales page from an NFC tag maker in China (RFIDHY). The "high-end perfume brand" is never named. It claims retention up 53%, refill orders up 41% and gift purchases up 28%, with no source, so don't quote those numbers.
+
+**New ideas from the page:**
+- Gift mode: a special message shows when the person receiving it taps. For us, a parent gives the freshener to a new driver and the first tap shows their note. Parents of new drivers are also shopping for insurance, since adding a teen raises the bill. The lead is the parent, never the teen; counsel should review anything touching a minor's data.
+- Scent by moment: "morning commute → citrus, evening → agarwood, stressful day → lavender." Their example is literally the commute.
+- Build notes: glass and metal block NFC, so they move the antenna to the edge (they claim 99% scan success) and use on-metal tags hidden in metal caps. Our wood face is fine. A metal face or trim would need an on-metal tag.
+- "Automatic refilling: detects low battery and orders replacements" contradicts their own battery-free cap. Treat it as marketing copy.
 
 **What's interesting:**
 - Three scents for different times of day.
