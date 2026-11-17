@@ -1,4 +1,5 @@
-"""Save Max Lives: unit economics and 3-year forecast.
+"""SUPERSEDED by paths.py (the deck's numbers come from paths.py). Kept for history.
+Save Max Lives: unit economics and 3-year forecast.
 Every input is listed in ASSUMPTIONS with its basis. Run: python3 model.py"""
 A = dict(
     # Kit (phase 1+): stock diffuser + NFC tag, $25

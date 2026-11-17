@@ -1,3 +1,4 @@
+# SUPERSEDED by paths.py (the deck's numbers come from paths.py). Kept for history.
 import copy, forecast as F
 from model import A, kit_contrib, per_buyer
 

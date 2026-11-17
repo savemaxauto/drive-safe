@@ -1,3 +1,4 @@
+# SUPERSEDED by paths.py (the deck's numbers come from paths.py). Kept for history.
 from model import A, per_buyer
 import copy, json
 

@@ -49,3 +49,8 @@ table{font-size:26px;color:var(--ink);width:100%}
 .arrow{width:56px;height:28px;background:var(--blue);align-self:center}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .in{animation:rise 600ms ease both;animation-delay:calc(var(--i) * 120ms)}
+.card .num{color:var(--ink)}
+.dark .card .num{color:var(--light)}
+.card .num.bad{color:var(--red)}
+.card .num.good{color:var(--green)}
+.card .who{font-size:24px;font-weight:600;color:var(--green);margin-top:auto}
